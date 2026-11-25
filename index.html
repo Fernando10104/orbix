@@ -16,9 +16,12 @@
   .hs5-photo { align-self: start; }
   .hs5-photo-frame { height: clamp(220px, 24vw, 290px); }
   .hs5-img { object-fit: cover; object-position: center; }
-  .orbix-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
-  @media (min-width: 640px) { .orbix-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-  @media (min-width: 900px) { .orbix-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+  .orbix-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 120px; gap: 8px; }
+  .orbix-gallery > div { overflow: hidden; border-radius: 3px; background: hsl(var(--muted)); }
+  .orbix-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .orbix-gallery .tile-large { grid-column: span 2; grid-row: span 2; }
+  @media (min-width: 640px) { .orbix-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 140px; } }
+  @media (min-width: 900px) { .orbix-gallery { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 150px; } }
 </style>
 </head>
 <body>
@@ -204,14 +207,15 @@
       <p class="max-w-xs text-sm leading-relaxed text-muted-foreground">Fotografías tomadas en el valle, sin retoque de color.</p>
     </div>
     <div class="mt-12 orbix-gallery">
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1.jpeg" alt="Domo geodésico iluminado en el bosque al anochecer"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/2.jpeg" alt="Interior del domo con cama king frente al bosque"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/3.jpeg" alt="Fogón de piedra y tazas de cerámica al atardecer"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1-2.jpeg" alt="Vista del domo y el entorno"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/2-2.jpeg" alt="Interior del domo"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/3-2.jpeg" alt="Detalle del fogón y el bosque"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1-3.jpeg" alt="Paisaje del valle"></div>
-      <div class="overflow-hidden rounded-sm bg-muted aspect-[4/3]"><img class="h-full w-full object-cover" src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/2-3.jpeg" alt="Domo geodésico durante el día"></div>
+      <div class="tile-large"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1-4.jpeg" alt="Vista principal del domo geodésico en el valle"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1.jpeg" alt="Domo geodésico iluminado en el bosque al anochecer"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/2.jpeg" alt="Interior del domo con cama king frente al bosque"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/3.jpeg" alt="Fogón de piedra y tazas de cerámica al atardecer"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1-2.jpeg" alt="Vista del domo y el entorno"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/2-2.jpeg" alt="Interior del domo"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/3-2.jpeg" alt="Detalle del fogón y el bosque"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/1-3.jpeg" alt="Paisaje del valle"></div>
+      <div class="tile"><img src="./ORBIX E.A.S. · Glamping en Piquete Cué, Limpio_files/972a2d8d2_generated_image(1).png" alt="Cena bajo las estrellas"></div>
     </div>
   </div>
 </section>
